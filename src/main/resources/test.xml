@@ -1,0 +1,13 @@
+<fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="false">
+    <analyzer type="index">
+        <tokenizer name="standard"/>
+        <filter words="stopwords.txt" ignoreCase="true" name="stop"/>
+        <filter name="lowercase"/>
+    </analyzer>
+    <analyzer type="query">
+        <tokenizer name="standard"/>
+        <filter words="stopwords.txt" ignoreCase="true" name="stop"/>
+        <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter name="lowercase"/>
+    </analyzer>
+</fieldType>
