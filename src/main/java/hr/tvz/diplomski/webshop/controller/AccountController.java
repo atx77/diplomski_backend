@@ -8,7 +8,6 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/account")
-@CrossOrigin(origins = "http://localhost:4200")
 public class AccountController {
 
     @Resource

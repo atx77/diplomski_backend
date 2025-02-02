@@ -11,7 +11,6 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/cart")
-@CrossOrigin(origins = "http://localhost:4200")
 public class CartController {
 
     @Resource

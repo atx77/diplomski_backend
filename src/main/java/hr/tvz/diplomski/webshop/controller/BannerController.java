@@ -8,7 +8,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/banner")
-@CrossOrigin(origins = "http://localhost:4200")
 public class BannerController {
 
     @Resource
