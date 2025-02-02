@@ -1,9 +1,9 @@
 package hr.tvz.diplomski.webshop.enumeration;
 
 public enum DeliveryMode {
-    COURIER("Kurirska dostava"),
-    EXPRESS("Ekspresna dostava"),
-    PERSONAL_PICKUP("Osobno preuzimanje");
+    COURIER("Address delivery"),
+    EXPRESS("Express delivery"),
+    PERSONAL_PICKUP("Personal pickup");
 
     private String description;
 

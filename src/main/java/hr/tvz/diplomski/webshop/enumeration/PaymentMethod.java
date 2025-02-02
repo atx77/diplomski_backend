@@ -1,9 +1,9 @@
 package hr.tvz.diplomski.webshop.enumeration;
 
 public enum PaymentMethod {
-    CREDIT_CARD("Kreditna kartica"),
+    CREDIT_CARD("Credit card"),
     PAYPAL("PayPal"),
-    CASH_ON_DELIVERY("Plaćanje pouzećem");
+    CASH_ON_DELIVERY("Cash on delivery");
 
     private String description;
 
