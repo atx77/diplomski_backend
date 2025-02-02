@@ -40,7 +40,6 @@ public class DataImporter {
         SolrClient solrClient = solrClientProvider.getSolrClient();
 
         int batchSize = 1000;
-
         Long lastProcessedId = 0L;
         boolean hasMoreProducts = true;
 
@@ -54,20 +53,15 @@ public class DataImporter {
                 }
 
                 List<SolrInputDocument> solrDocs = new ArrayList<>();
-
                 for (Product product : products) {
                     SolrInputDocument doc = createSolrDocument(product);
                     solrDocs.add(doc);
-
                     lastProcessedId = product.getId();
                 }
 
                 solrClient.add(solrDocs);
-
                 solrClient.commit();
-
                 entityManager.clear();
-
                 log.info("Processed up to product ID: {}", lastProcessedId);
             }
         } catch (Exception e) {
